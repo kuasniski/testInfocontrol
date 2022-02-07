@@ -13,7 +13,7 @@ formUser.addEventListener('submit',function(event){
     event.preventDefault();
     var datos = new FormData(formUser);
         
-    fetch("http://localhost/testInfocontrol/?user/save",{
+    fetch("http://localhost/testInfocontrol/?controller=user&action=save",{
         method : 'POST',
         body : datos
     })
@@ -39,7 +39,7 @@ formUser.addEventListener('submit',function(event){
                 showConfirmButton: false,
             });
             setInterval(() => {
-                window.location.href="http://localhost/testInfocontrol/?user/registerEdit/&id="+data.id;
+                window.location.href="http://localhost/testInfocontrol/?controller=user&action=registerEdit&id="+data.id;
             }, 4000);
         }
     
